@@ -2,7 +2,19 @@ import React, { Component } from 'react'
 
 import QuizQuestionButton from './QuizQuestionButton'
 
+/**
+ * Quiz question component
+ *
+ * @class QuizQuestion
+ * @extends {Component}
+ */
 class QuizQuestion extends Component {
+  /**
+   *Creates an instance of QuizQuestion.
+   *
+   * @param {object} props - Properties passed to component
+   * @memberof QuizQuestion
+   */
   constructor(props) {
     super(props)
     this.state = {
@@ -10,6 +22,14 @@ class QuizQuestion extends Component {
     }
   }
 
+  /**
+   * Handle button click event
+   *
+   * @param {string} buttonText - Text value to the button element
+   *
+   * @returns {undefined} Updates the state
+   * @memberof QuizQuestion
+   */
   handleClick(buttonText) {
     if (buttonText === this.props.quiz_question.answer) {
       this.setState({
@@ -23,6 +43,12 @@ class QuizQuestion extends Component {
     }
   }
 
+  /**
+   * Render method
+   *
+   * @returns {object} React element
+   * @memberof QuizQuestion
+   */
   render() {
     return (
       <main>
